@@ -4,7 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.mjs",
+    "docker:build": "docker build . -t fernandobhz/poc-pdf-maker",
+    "docker:bash": "docker run -it fernandobhz/poc-pdf-maker bash",
+    "docker:run": "docker run fernandobhz/poc-pdf-maker",
+    "docker:bunex": "npm run docker:build && npm run docker:run"
   },
   "keywords": [],
   "author": "",

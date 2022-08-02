@@ -17,7 +17,8 @@ RUN apk add --no-cache \
         linux-headers \
         make \
         python3 \
-        nodejs npm \
+        nodejs-current \
+        npm \
         openjdk8 \
         chromium \
         nss \
@@ -49,4 +50,5 @@ RUN npm install -g npm
 RUN mkdir /app
 WORKDIR /app
 COPY ./ ./
+RUN npm install
 CMD [ "node", "index.mjs" ]
